@@ -1,0 +1,148 @@
+
+
+.paragraph {
+    max-width: 800px; /* Define uma largura máxima fixa para o texto */
+    width: 100%; /* Define que a largura do parágrafo ocupe 80% da página */
+    height: auto; /* Altura ajustável conforme o conteúdo */
+    color: rgba(255, 255, 255, 0.952);
+    padding: 0px 10px; /* Adiciona espaçamento interno */
+    text-align: left ; /* Centraliza o texto */
+    margin: 0 auto;
+    line-height: 1.6; /* Espaçamento entre linhas */
+    font-size: 1.1rem; /* Tamanho da fonte */
+
+}
+img {
+    max-width: 100%; /* Define uma largura máxima para a imagem */
+    width: 80%; /* Define que a imagem ocupe até 80% da largura da página */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Necessário para usar margin auto com imagens */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    object-fit: contain; /* Ajusta a imagem para caber no espaço, mantendo proporções */
+    border-radius: 100px /* Arredonda os cantos da imagem */
+}
+/* Define a imagem de fundo para o corpo da página */
+body {
+    background-image: url('img/wp3756528-dark-souls-remastered-wallpapers.jpg'); /* colocar imagem de fundo */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos padrão */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+    background-color: #000; /* Adiciona um fundo básico para evitar falhas visuais */
+    height: 100vh; /* Garante que o body ocupe 100% da altura da janela */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;
+    position: relative; /* Garante que as camadas sejam organizadas corretamente */
+}
+header.png {
+    text-align: center; /* Garante que a imagem esteja centralizada */
+    margin-bottom: 20px; /* Espaço entre a imagem e a .materia */
+}
+
+header.png img {
+    max-width: 100%; /* Garante que a imagem seja responsiva */
+    width: 80%; /* Ocupa 80% da largura da tela */
+    height: auto; /* Mantém a proporção */
+}
+#titulo {
+    color: rgba(255, 255, 255, 0.616);
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2rem; /* Aumenta o tamanho dos títulos */
+    font-weight: bold;
+    text-transform: uppercase; /* Coloca os títulos em letras maiúsculas */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Adiciona sombra para destaque */
+}
+.materia {
+    max-width: 800px; /* Largura máxima */
+    width: 100%; /* Ocupa a largura disponível */
+    height: 60vh; /* Altura fixa da área de rolagem */
+    overflow-y: auto; /* Permite a rolagem vertical */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    backdrop-filter: blur(20px); /* Aplica desfoque ao fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 70px 20px; /* Espaçamento interno */
+    box-shadow: 10px 4px 15px rgb(0, 0, 0); /* Adiciona uma sombra */
+    text-align: left; /* Alinha o texto à esquerda */
+    scrollbar-width: thin; /* Personaliza a barra de rolagem para navegadores modernos */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Cor da barra de rolagem */
+    opacity: 0; /* Invisível no início */
+    transform: translateY(50px); /* Ligeiramente deslocada para baixo */
+    transition: opacity 1s ease, transform 1s ease; /* Animação suave */
+    scroll-behavior: smooth; /* Scroll suave para navegadores modernos */
+}
+.materia.animate { 
+    animation: fadeIn 1s ease-out forwards; /* Ativa a animação */
+}
+
+.materia::-webkit-scrollbar { /* Estiliza a barra de rolagem no elemento com a classe .materia */
+    width: 8px; /* Largura da barra de rolagem */
+}
+.materia::-webkit-scrollbar-thumb { /* Estiliza o "polegar" da barra de rolagem (a parte que desliza) */
+    background: rgba(255, 255, 255, 0.5); /* Cor do polegar da barra */
+    border-radius: 10px;
+}
+.materia::-webkit-scrollbar-track { /* Estiliza o "trilho" da barra de rolagem (o fundo por onde o polegar desliza) */
+    background: transparent; /* Fundo da barra transparente*/
+}
+.lista {
+    text-align: left;
+    padding: 10px;
+    padding-top: 0px;
+    list-style-type: none;
+}
+.lista li {
+    margin: 5px;
+}
+.branca {
+    color: rgba(255, 255, 255, 0.897);
+    margin: 2px;
+    line-height: 1.6; /* Espaçamento entre linhas */
+    font-size: 1.1rem; /* Tamanho da fonte */
+}
+#paragrafo-2 {
+    margin-bottom: 0px;
+}
+.titulo-lista {
+    color: rgba(255, 255, 255, 0.603);
+    text-align: left;
+    margin-left: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Adiciona sombra para destaque */
+    
+}
+header.png {
+    text-align: center; /* Centraliza a imagem */
+    margin-bottom: 20px; /* Espaço maior entre a imagem e a matéria */
+}
+.ap {    
+    color: rgba(255, 255, 255, 0.822);
+    margin: 2px;
+}
+.rodape {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+    .paragraph {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+    }
+
+    #titulo {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Deslocamento inicial */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

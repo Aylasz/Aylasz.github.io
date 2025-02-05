@@ -63,7 +63,8 @@ header.png img {
     background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
     backdrop-filter: blur(20px); /* Aplica desfoque ao fundo */
     border-radius: 10px; /* Bordas arredondadas */
-    padding: 70px 20px; /* Espaçamento interno */
+    padding: 70px 20px; /* Espaçamento interno primeiro px é top segundo px é o rigth terceiro px é o bottom e o quarto px é o left isso se chaam shorthand*/
+    /* 70px top e bottom 20px right left. isto é uma regra do css quando se coloca apenas 2 valores ele cria esse padrão */
     box-shadow: 10px 4px 15px rgb(0, 0, 0); /* Adiciona uma sombra */
     text-align: left; /* Alinha o texto à esquerda */
     scrollbar-width: thin; /* Personaliza a barra de rolagem para navegadores modernos */
